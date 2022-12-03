@@ -1,5 +1,5 @@
 Beat the Dealer
-
+=====================
 Text-based game for engg1340/comp2113 project
 
 Team members:
