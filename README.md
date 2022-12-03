@@ -9,16 +9,15 @@ Vu Duc Manh 3035806790
 
 Game description:
 ----------------------
-  nested bullet list Beat the Dealer is a classic drinking game by sheer luck
+  - list Beat the Dealer is a classic drinking game by sheer luck
   implement in c++
   include some new game features such as items, level, money and score systems
 
 Game rules:
 ---------------------
-  52 poker cards 
-  the player guesses the card's:
-  for card 3 - K, the player has to guess whether the next card is larger or smaller than the previous one
-  for card A and 2, the player has to guess whether the next card is red or black
+  - 52 poker cards 
+  - the player guesses the card's:
+  - for card 3 - K, the player has to guess whether the next card is larger or smaller than the previous one for card A and 2, the player has to guess whether the next card is red or black
   if guessed right:
   proceed to the next card
   ++money and ++score
