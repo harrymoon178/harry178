@@ -9,7 +9,7 @@ Vu Duc Manh 3035806790
 
 Game description:
 ----------------------
-  Bullet list Beat the Dealer is a classic drinking game by sheer luck
+  nested bullet list Beat the Dealer is a classic drinking game by sheer luck
   implement in c++
   include some new game features such as items, level, money and score systems
 
