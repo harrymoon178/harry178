@@ -21,3 +21,39 @@ void correct(User &usr, int *p_inv) {
   }
   if (!p_inv[1])
     cout << "Score--> " << usr.score << " + " << inc_score << endl;
+
+  usr.money += inc_money;
+  usr.score += inc_score;
+  usr.print_info();
+}
+// Function: 
+// - the user will level up if he/she passes seven times consecutively 
+// - the user can choose to continue or not
+// Input: the address of the user and a pointer to inventory 
+// Output: 
+// - level up if the user passes seven times consecutively 
+// - if the user chooses to continue: play is true and the game continues
+// - if the user does not choose to continue: play is false and the game ends
+bool levelUp(User &usr, int *p_inv) {
+  cout << "\033[0;33mYou Win!\033[0m" << endl;
+
+  cout << "Level--> " << usr.level << " + 1" << endl;
+  usr.level++;
+  usr.print_info();
+
+  char choice;
+  bool play;
+  while (1) {
+    cout << "Continue to play? [y/n]" << endl;
+    cout << ">> ";
+    cin >> choice;
+    if (choice == 'y') {
+      play = true;
+      break;
+    }
+    else if (choice == 'n')
+      play = false;
+      break;
+  }
+  return play;
+}
