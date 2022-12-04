@@ -57,3 +57,69 @@ bool levelUp(User &usr, int *p_inv) {
   }
   return play;
 }
+// Function: the game ends when the user guesses wrong unless he/she chooses to resurrect
+// Input: the address of the user and result
+// Output: 
+// - if the user guesses wrong and choose to ressurect: resurrect is true and the game continues
+// - if the user guesses wrong and do not choose to ressurect: resurrect is false and the game ends	
+bool gameOver(User &usr, int result) {
+  int amount = usr.level * 100 * result;
+  bool resurrect;
+
+  cout << "\033[0;31mGAME OVER.\033[0m" << endl;
+  usr.print_info();
+  while (1) {
+    char option;
+    cout << "Pay $ " << amount << " to resurrect? [y/n]" << endl; //player has to pay to resurrect
+    cout << ">> ";
+    cin >> option;
+
+    if (option == 'y')
+      if (usr.money < amount)
+        cout << "\033[0;31m--Error: You don't have enough money.\033[0m" << endl; //player can't resurrect if he/she does not have enough money
+      else {
+        cout << "Money--> " << usr.money << " - " << amount << endl;
+        usr.money -= amount;
+        resurrect = true;
+	usr.print_info();
+        break;
+      }
+    else if (option == 'n') {
+      usr.reset();
+      cout << "Level--> 1" << endl;
+      cout << "Score--> 0" << endl;
+      resurrect = false;
+      usr.print_info();
+      break;
+    }
+  }
+
+  return resurrect;
+}
+
+// Function: to guess the size of the next card
+// Input: the size of the next card
+// Output: 
+// - if the size of the next card is same as the current card: result = 2 and the user has to pay double to resurrect 
+// - if the size of the next card is guessed correctly: result is true and the game continues
+// - if the size of the next card is not guessed correctly: result is false and the game ends
+// - if the input is not correct: result = -1 and the user has to type again
+int GuessSize(Card currentcard, Card nextcard) { 
+  char choice;
+  cout << "Press 'L' if you think the next card will be larger" << endl;
+  cout << "Press 'S' if you think the next card will be smaller" << endl;
+  cout << ">> ";
+  cin >> choice;
+
+  int result = 1;
+  if (nextcard.rank_idx == currentcard.rank_idx)
+      result = 2;
+  else if (choice == 'S' && (nextcard.rank_idx < currentcard.rank_idx))
+      result = 0;
+  else if (choice == 'L' && (nextcard.rank_idx > currentcard.rank_idx))
+      result = 0;
+  else if (choice != 'S' && choice != 'L')
+      result = -1;
+
+  return result;
+}
