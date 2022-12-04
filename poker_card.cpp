@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>      // for setw()
-#include "pocker_card.h"
+#include "card.h"
 
 // Function: to construct a card
 // Input: suits and ranks
