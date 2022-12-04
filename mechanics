@@ -1,0 +1,23 @@
+#include <iostream>
+#include "mechanics.h"
+
+// Function: add scores and money to the user if he/she guesses correctly
+// Input: the address of the user and a pointer to inventory 
+// Output: scores and money added if the user guesses correctly
+void correct(User &usr, int *p_inv) {
+  int inc_money = usr.level * 50;
+  int inc_score = usr.level * 100;
+
+  if (p_inv[0]) {
+    cout << "Money--> " << usr.money << " + " << inc_money << "\033[0;36m x 2\033[0m" << endl;
+    inc_money *= 2;
+  }
+  if (!p_inv[0])
+    cout << "Money--> " << usr.money << " + " << inc_money << endl;
+
+  if (p_inv[1]) {
+    cout << "Score--> " << usr.score << " + " << inc_score << "\033[0;36m x 2\033[0m" << endl;
+    inc_score *= 2;
+  }
+  if (!p_inv[1])
+    cout << "Score--> " << usr.score << " + " << inc_score << endl;
