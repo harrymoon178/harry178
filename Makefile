@@ -1,6 +1,6 @@
 FLAGS = -pedantic-errors -std=c++11
 
-beat_the_dealer: main.o menu.o user.o card.o mechanics.o game.o
+large_small_red_black: main.o menu.o user.o card.o mechanics.o game.o
 	g++ $(FLAGS) $^ -o $@
 
 main.o: main.cpp menu.h user.h card.h mechanics.h game.h
