@@ -66,10 +66,10 @@ List of features: (with code requirements 1-5)
 Compilation and execution instructions:
 ----------------------------------------------------
  - Steps:
-   1. move the current directory to where the program files are located
-  make
-   2./beat_the_dealer
-   3.After entering the main menu, type 1 to create new player
+   1. move the current directory to where the program files are located 
+   2. make
+   3. /beat_the_dealer
+ - After entering the main menu, type 1 to create new player
  - type 2 to select a player to start the game
  - type 3 to show the leaderboard
  - type 4 to load game status from a file in the same directory as the program files
