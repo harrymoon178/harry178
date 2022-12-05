@@ -5,7 +5,7 @@ Text-based game for COMP2113 project
 Team member:
 -----------------------
 
-Vu Duc Manh 3035806790
+- Vu Duc Manh 3035806790
 
 Game description:
 ----------------------
