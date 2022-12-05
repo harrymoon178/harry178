@@ -1,16 +1,3 @@
-for (int i = 0; i < 12; i++)
-    cout << '*';
-  cout << endl;
-  cout << '*' << right << setw(2) << rank << suit << setw(8) << '*' << endl;
-
-
-for (int i = 0; i < 12; i++)
-    cout << '*';
-  cout << endl;
-
-
-
-
 Large Small Red Black 
 =====================
 Text-based game for COMP2113 project
