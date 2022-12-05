@@ -22,6 +22,6 @@ game.o: game.cpp game.h user.h card.h mechanics.h
 	g++ $(FLAGS) -c $<
 
 clean:
-	rm *.o beat_the_dealer
+	rm *.o Large_Small_Red_Black
 
 .PHONY: clean
