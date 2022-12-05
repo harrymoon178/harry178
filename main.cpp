@@ -10,7 +10,7 @@
 int main() { 
   while (1) {
     cout << "   \033[0;33m-------------------------------------\033[0m" << endl;
-    cout << "   \033[1;33m **********BEAT THE DEALER**********\033[0m" << endl;
+    cout << "   \033[1;33m **********Large Small Red Black**********\033[0m" << endl;
     cout << "   [1 - New Game]" << endl;
     cout << "   [2 - Continue]" << endl;
     cout << "   [3 - Leaderboard]" << endl;
